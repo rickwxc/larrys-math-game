@@ -70,6 +70,17 @@ function App() {
     <Grid container spacing={3}>
         <Grid item xs={6}>
           {elements.map((props, idx) => {
+            if (!(idx > currentIdx)){
+              return
+            }
+            return <Result {...props}
+            hideInput={true}
+            currentIdx={currentIdx}
+            setCurrentIdx={setCurrentIdx} />
+          })}
+        </Grid>
+        <Grid item xs={6}>
+          {elements.map((props, idx) => {
             if (!(idx < currentIdx)){
               return
             }
@@ -79,17 +90,6 @@ function App() {
             setCurrentIdx={setCurrentIdx} />
           })}
 
-        </Grid>
-        <Grid item xs={6}>
-          {elements.map((props, idx) => {
-            if (!(idx > currentIdx)){
-              return
-            }
-            return <Result {...props}
-            hideInput={true}
-            currentIdx={currentIdx}
-            setCurrentIdx={setCurrentIdx} />
-          })}
         </Grid>
     </Grid>
     </div>
