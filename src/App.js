@@ -55,11 +55,7 @@ function App() {
   const classes = useStyles();
   return (
     <div>
-          <Container
-
-    maxWidth="sm">
 <Card>
-
 <CardContent>
           {elements.map((props, idx) => {
             if (idx !== currentIdx){
@@ -72,12 +68,11 @@ function App() {
           })}
 </CardContent>
 </Card>
-          </Container>
 
     <br />
     <br />
     <Grid container spacing={3}>
-        <Grid item xs={6}>
+        <Grid item md={6}  xs={12}>
           {elements.map((props, idx) => {
             if (!(idx > currentIdx)){
               return
@@ -88,7 +83,7 @@ function App() {
             setCurrentIdx={setCurrentIdx} />
           })}
         </Grid>
-        <Grid item xs={6}>
+        <Grid item md={6} xs={12}>
           {elements.map((props, idx) => {
             if (!(idx < currentIdx)){
               return

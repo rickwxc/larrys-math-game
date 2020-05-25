@@ -95,7 +95,8 @@ function Result(props) {
   currentIdx={currentIdx} setCurrentIdx={setCurrentIdx}
   v={n1} color={color}  result={result} />
 
-      <IconButton  component="span">
+      <IconButton size="small"  component="span">
+
       {add == '1'? <AddIcon />:<MinusIcon />}
       </IconButton>
 
@@ -107,7 +108,7 @@ function Result(props) {
   v={n2} color={color}  result={result}  />
 
       <IconButton >
-        <EqualSign />
+        <EqualSign size="small"  />
       </IconButton>
 
       <Comp
@@ -132,17 +133,20 @@ hideInput,
   if (v){
     return <Button
 
+    size="small"
       className={classes[color]}
     variant="contained">{v}</Button>
   }
 
   if (showResult){
     return <Button
+    size="small"
       className={classes[color]}
     variant="contained">{result}</Button>
   }
   if (hideInput){
     return <Button
+    size="small"
       className={classes[color]}
     variant="contained">?</Button>
   }
