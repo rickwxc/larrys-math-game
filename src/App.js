@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Container from '@material-ui/core/Container';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -53,7 +55,12 @@ function App() {
   const classes = useStyles();
   return (
     <div>
-          <Container maxWidth="sm">
+          <Container
+
+    maxWidth="sm">
+<Card>
+
+<CardContent>
           {elements.map((props, idx) => {
             if (idx !== currentIdx){
               return
@@ -63,6 +70,8 @@ function App() {
             currentIdx={currentIdx}
             setCurrentIdx={setCurrentIdx} />
           })}
+</CardContent>
+</Card>
           </Container>
 
     <br />

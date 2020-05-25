@@ -28,6 +28,10 @@ const useStyles = makeStyles({
     fontSize:22,
   },
 
+  trans: {
+    backgroundColor: 'transparent',
+  },
+
   pink: {
     backgroundColor: pink,
     fontSize:22,
@@ -79,8 +83,11 @@ function Result(props) {
   let {n1, n2, n3, showResult, hideInput, autoFocus, result, add, currentIdx, setCurrentIdx} = props
 
 
-  return <Card >
-    <CardContent >
+  return <div
+      className={classes['trans']}
+    >
+    <div
+    >
       <Comp
   showResult={showResult}
   autoFocus={autoFocus}
@@ -111,8 +118,8 @@ function Result(props) {
   currentIdx={currentIdx} setCurrentIdx={setCurrentIdx}
   v={n3} color={color}  result={result} />
 
-    </CardContent>
-    </Card>
+    </div>
+    </div>
 }
 
 function Comp(props){
